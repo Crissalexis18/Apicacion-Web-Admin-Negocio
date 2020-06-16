@@ -14,42 +14,61 @@
 
 <body class='Fondo'>
 
-    <div class='jumbotron FondoHeader '>
-        <h1>Inserte titulo generico de taqueria</h1>
-        <h5>Inserte un slogan promedio</h5>
+    <div class='container-fluid FondoHeader'>
+        <div class='p-5 my-0'>
+            <h1>Tacos Vacil&oacute;n</h1>
+            <h5>"No están buenos, pero quitan el hambre"</h5>
+        </div>
+
+        <div>
+            <ul class='nav nav-tabs justify-content-end text-white '>
+                <li class='nav-item'>
+                    <a class='nav-link active' href='PaginaCobro.html'>Cobro</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='PaginaRegArticulos.html'>Registro Artículos</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='ListaVentas.html'>Lista Ventas</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <form class='text-white'>
+
+    <!--Contenido-->
+    <form name="registroClientes" class='text-white'>
 
         <legend>Página de Cóbro</legend>
-        <label for='name'>Nombre</label>
-        <input id='name' type='text' name='name'>
+        <label>Nombre</label>
+        <input id='nombreUsuario' type='text' name='nombreUsuario'>
 
         <label>Tipo de taco:</label>
         <div class='buttons'>
-            <button class='btn-hover color-1' >BUTTON</button>
-            <button class='btn-hover color-2'>BUTTON</button>
-            <button class='btn-hover color-3'>BUTTON</button>
-            <button class='btn-hover color-5'>BUTTON</button>
-            <button class='btn-hover color-6'>BUTTON</button>
-            <button class='btn-hover color-4'>BUTTON</button>
-            <button class='btn-hover color-7'>BUTTON</button>
-            <button class='btn-hover color-9'>BUTTON</button>
-            <button class='btn-hover color-10'>BUTTON</button>
-            <button class='btn-hover color-11'>BUTTON</button>
-            <button class='btn-hover color-1'>BUTTON</button>
-            <button class='btn-hover color-2'>BUTTON</button>
-            <button class='btn-hover color-3'>BUTTON</button>
-            <button class='btn-hover color-6'>BUTTON</button>
+            <button id='botonC1' name = 'botonC1' class='btn-hover color-1' >BUTTON</button>
+            <button id='botonC2' name = 'botonC2' class='btn-hover color-2'>BUTTON</button>
+            <button id='botonC3' name = ´botonC3' class='btn-hover color-3'>BUTTON</button>
+            <button id='botonC4' name = ´botonC4' class='btn-hover color-5'>BUTTON</button>
+            <button id='botonC5' name = ´botonC5' class='btn-hover color-6'>BUTTON</button>
+            <button id='botonC6' name = ´botonC6' class='btn-hover color-4'>BUTTON</button>
+            <button id='botonC7' name = ´botonC7' class='btn-hover color-7'>BUTTON</button>
+            <button id='botonC8' name = ´botonC8' class='btn-hover color-9'>BUTTON</button>
+            <button id='botonC9' name = ´botonC9' class='btn-hover color-10'>BUTTON</button>
+            <button id='botonC10' name = ´botonC10' class='btn-hover color-11'>BUTTON</button>
+            <button id='botonC11' name = ´botonC11' class='btn-hover color-1'>BUTTON</button>
+            <button id='botonC12' name = 'botonC12' class='btn-hover color-2'>BUTTON</button>
+            <button id='botonC13' name = 'botonC13' class='btn-hover color-3'>BUTTON</button>
+            <button id='botonC14' name = 'botonC14' class='btn-hover color-6'>BUTTON</button>
+            <button id='botonC15' name = 'botonC15' class='btn-hover color-7'>BUTTON</button>
         </div>
 
         <label>Numero de tacos:</label>
         <div class='buttons'>
-            <button class='btn-hover color-1'>Quitar</button>
-            <button class='btn-hover color-2'>Agregar</button>
+            <button id='agregarArt' name='agregarArt' class='btn-hover color-1'>Quitar</button>
+            <button id='quitarArt' name='quitarArt' class='btn-hover color-2'>Agregar</button>
         </div>
 
-        <button class='btn-hover color-8'>Enviar</button>
+        <button id='enviarCliente' name='enviarCliente' class='btn-hover color-8'>Enviar</button>
     </form>
 
     <div class='container'>

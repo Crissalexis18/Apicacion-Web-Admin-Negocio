@@ -14,16 +14,33 @@
 
 <body class='Fondo'>
 
-    <div class='jumbotron FondoHeader '>
-        <h1>Inserte titulo generico de taqueria</h1>
-        <h5>Inserte un slogan promedio</h5>
+<div class='container-fluid FondoHeader'>
+    <div class='p-5 my-0'>
+        <h1>Tacos Vacil&oacute;n</h1>
+        <h5>"No están buenos, pero quitan el hambre"</h5>
     </div>
 
+    <div>
+        <ul class='nav nav-tabs justify-content-end text-white'>
+            <li class='nav-item'>
+                <a class='nav-link' href='PaginaCobro.html'>Cobro</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href='PaginaRegArticulos.html'>Registro Artículos</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link active' href='ListaVentas.html'>Lista Ventas</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--Contenido-->
     <form class='text-white'>
         <legend>Lista de Ventas</legend>
         <label>Selecciona la fecha para mostrar</label>
-        <input type="date"  name="fechaventas">
-        <button class='btn-hover color-8'>Enviar</button>
+        <input type='date' id='fechaventas' name='fechaventas'>
+        <button id="enviarVentas" name="enviarVentas" class='btn-hover color-8'>Enviar</button>
     </form>
 
 </body>
