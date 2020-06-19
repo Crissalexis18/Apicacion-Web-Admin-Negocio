@@ -41,6 +41,8 @@ form {
 a { color: #ffffff; }
 a:hover { color: #ffffff; }
 
+th:hover {color: #ffffff;}
+
 .nav-tabs {
 
     width: 100%;

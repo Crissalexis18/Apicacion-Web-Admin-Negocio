@@ -9,6 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Estilos/CSS.css">
+    <script src="../JavaScript/JS.js"></script>
+
 
 </head>
 
@@ -43,35 +46,37 @@
 
         <legend>Página de Cóbro</legend>
         <label>Nombre</label>
-        <input id='nombreUsuario' type='text' name='nombreUsuario'>
+        <input id='nombreCliente' type='text' name='nombreCliente'>
 
         <label>Tipo de taco:</label>
-        <div class='buttons'>
-            <button id='botonC1' name = 'botonC1' class='btn-hover color-1' >BUTTON</button>
-            <button id='botonC2' name = 'botonC2' class='btn-hover color-2'>BUTTON</button>
-            <button id='botonC3' name = ´botonC3' class='btn-hover color-3'>BUTTON</button>
-            <button id='botonC4' name = ´botonC4' class='btn-hover color-5'>BUTTON</button>
-            <button id='botonC5' name = ´botonC5' class='btn-hover color-6'>BUTTON</button>
-            <button id='botonC6' name = ´botonC6' class='btn-hover color-4'>BUTTON</button>
-            <button id='botonC7' name = ´botonC7' class='btn-hover color-7'>BUTTON</button>
-            <button id='botonC8' name = ´botonC8' class='btn-hover color-9'>BUTTON</button>
-            <button id='botonC9' name = ´botonC9' class='btn-hover color-10'>BUTTON</button>
-            <button id='botonC10' name = ´botonC10' class='btn-hover color-11'>BUTTON</button>
-            <button id='botonC11' name = ´botonC11' class='btn-hover color-1'>BUTTON</button>
-            <button id='botonC12' name = 'botonC12' class='btn-hover color-2'>BUTTON</button>
-            <button id='botonC13' name = 'botonC13' class='btn-hover color-3'>BUTTON</button>
-            <button id='botonC14' name = 'botonC14' class='btn-hover color-6'>BUTTON</button>
-            <button id='botonC15' name = 'botonC15' class='btn-hover color-7'>BUTTON</button>
+        <div class='buttons' id='buttons'>
+            <p id="tipoArticulo" >Artículo</p>
+            <button id='botonC1' name = 'botonC1' class='btn-hover color-1' value='5' onclick='bot1()'>BUTTON1</button>
+            <button id='botonC2' name = 'botonC2' class='btn-hover color-2' value='5' onclick='bot2()'>BUTTON2</button>
+            <button id='botonC3' name ='botonC3' class='btn-hover color-3' value='5' onclick='bot3()'>BUTTON3</button>
+            <button id='botonC4' name = 'botonC4' class='btn-hover color-5' value='5' onclick='bot4()'>BUTTON4</button>
+            <button id='botonC5' name = 'botonC5' class='btn-hover color-6' value='5' onclick='bot5()'>BUTTON5</button>
+            <button id='botonC6' name = 'botonC6' class='btn-hover color-4' value='5' onclick='bot6()'>BUTTON6</button>
+            <button id='botonC7' name = 'botonC7' class='btn-hover color-7' value='5' onclick='bot7()'>BUTTON7</button>
+            <button id='botonC8' name = 'botonC8' class='btn-hover color-9' value='5' onclick='bot8()'>BUTTON8</button>
+            <button id='botonC9' name = 'botonC9' class='btn-hover color-10' value='5' onclick='bot9()'>BUTTON9</button>
+            <button id='botonC10' name = 'botonC10' class='btn-hover color-11' value='5' onclick='bot10()'>BUTTON10</button>
+            <button id='botonC11' name = 'botonC11' class='btn-hover color-1' value='5' onclick='bot11()'>BUTTON11</button>
+            <button id='botonC12' name = 'botonC12' class='btn-hover color-2' value='5' onclick='bot12()'>BUTTON12</button>
+            <button id='botonC13' name = 'botonC13' class='btn-hover color-3' value='5' onclick='bot13()'>BUTTON13</button>
+            <button id='botonC14' name = 'botonC14' class='btn-hover color-6' value='5' onclick='bot14()'>BUTTON14</button>
+            <button id='botonC15' name = 'botonC15' class='btn-hover color-7' value='5' onclick='bot15()'>BUTTON15</button>
         </div>
 
         <label>Numero de tacos:</label>
         <div class='buttons'>
-            <button id='agregarArt' name='agregarArt' class='btn-hover color-1'>Quitar</button>
-            <button id='quitarArt' name='quitarArt' class='btn-hover color-2'>Agregar</button>
+
+            <p id="numArticulo" >1</p>
+            <button id='agregarArt' name='agregarArt' class='btn-hover color-1' onclick='Quitar_Articulo()'>Quitar</button>
+            <button id='quitarArt' name='quitarArt' class='btn-hover color-2' onclick='Agregar_Articulo()'>Agregar</button>
         </div>
 
-        <button id='enviarCliente' name='enviarCliente' class='btn-hover color-8'>Enviar</button>
-        </form>
+        <button id='enviarCliente' name='enviarCliente' class='btn-hover color-8' onclick='calcularPrecio()'>Añadir</button>
 
     </div>
 
@@ -80,11 +85,15 @@
             <tr>
                 <th>Cliente</th>
                 <th>Nombre</th>
-                <th>Tipo</th>
+                <th>Taco</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
+                <th>Total</th>
             </tr>
         </table>
+    </div>
+    <div class='form1' >
+        <button id='enviarPago' name='enviarPago' class='btn-hover color-8' onclick='enviarForm()'>Finalizar</button>
     </div>
 
 
