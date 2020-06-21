@@ -24,92 +24,92 @@ function Quitar_Articulo() {
 
 
 function bot1() {
-    num1= document.getElementById("botonC1").textContent;
+    num1= document.getElementById("botonA1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonA1").value;
 
 }
 function bot2() {
-    num1= document.getElementById("botonC2").textContent;
+    num1= document.getElementById("botonA2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonA2").value;
 }
 function bot3() {
-    num1= document.getElementById("botonC3").textContent;
+    num1= document.getElementById("botonA3").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonA3").value;
 }
 function bot4() {
-    num1= document.getElementById("botonC4").textContent;
+    num1= document.getElementById("botonB1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonb1").value;
 }
 function bot5() {
-    num1= document.getElementById("botonC5").textContent;
+    num1= document.getElementById("botonB2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonB2").value;
 }
 function bot6() {
-    num1= document.getElementById("botonC6").textContent;
+    num1= document.getElementById("botonB3").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonB3").value;
 }
 function bot7() {
-    num1= document.getElementById("botonC7").textContent;
+    num1= document.getElementById("botonC1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
     precio= document.getElementById("botonC1").value;
 }
 function bot8() {
-    num1= document.getElementById("botonC8").textContent;
+    num1= document.getElementById("botonC2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonC2").value;
 }
 function bot9() {
-    num1= document.getElementById("botonC9").textContent;
+    num1= document.getElementById("botonC3").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonC3").value;
 }
 function bot10() {
-    num1= document.getElementById("botonC10").textContent;
+    num1= document.getElementById("botonD1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonD1").value;
 }
 function bot11() {
-    num1= document.getElementById("botonC11").textContent;
+    num1= document.getElementById("botonD2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonD2").value;
 }
 function bot12() {
-    num1= document.getElementById("botonC12").textContent;
+    num1= document.getElementById("botonD3").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonD3").value;
 }
 function bot13() {
-    num1= document.getElementById("botonC13").textContent;
+    num1= document.getElementById("botonE1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonE1").value;
 }
 function bot14() {
-    num1= document.getElementById("botonC14").textContent;
+    num1= document.getElementById("botonE2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonE2").value;
 }
 function bot15() {
-    num1= document.getElementById("botonC15").textContent;
+    num1= document.getElementById("botonE3").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC1").value;
+    precio= document.getElementById("botonE3").value;
 }
 
 
 
 function calcularPrecio() {
 
-    var precio1= precio * num;
+    //var precio1= precio * num;
 
-    <!--cliente=cliente+1;-->
-    total = total + precio1;
+    cliente=cliente+1
+    total = precio * num;
 
-    agregaRenglon(cliente, num, precio1, num1, total);
+    agregaRenglon(cliente, num, precio, num1, total);
 
 }
 
