@@ -13,7 +13,7 @@ function Agregar_Articulo() {
     document.getElementById("numArticulo").innerHTML = (num = (num +1));
 }
 function Quitar_Articulo() {
-    if (num >= 1){
+    if (num > 1){
         document.getElementById("numArticulo").innerHTML = (num = (num -1));
     }
     else{
@@ -110,13 +110,16 @@ function calcularPrecio() {
     total = precio * num;
 
     agregaRenglon(cliente, num, precio, num1, total);
+	
+	
+	
 
 }
 
 function agregaRenglon(cliente, num, precio1, num1, total) {
 
     var nombre= document.getElementById("nombreCliente").value;
-
+	
     // Obtiene una referencia a la tabla
     var tableRef = document.getElementById("tablaClientes");
     // Inserta una fila en la tabla, en el índice 0
@@ -153,7 +156,28 @@ function agregaRenglon(cliente, num, precio1, num1, total) {
             newCell.appendChild(newText);
         }
     }
-
+	//corregir valores - conversion de datos entre lenguajes
+	document.getElementByName("clientejs").innerHTML="<?php 
+	$phpvar='"+cliente+"'; 
+	echo $phpvar;?>";
+	document.getElementByName("cantidadjs").innerHTML="<?php 
+	$phpvar='"+num+"'; 
+	echo $phpvar;?>";
+	document.getElementByName("preciojs").innerHTML="<?php 
+	$phpvar='"+precio+"'; 
+	echo $phpvar;?>";
+	document.getElementByName("tacojs").innerHTML="<?php 
+	$phpvar='"+num1+"'; 
+	echo $phpvar;?>";
+	document.getElementByName("totaljs").innerHTML="<?php 
+	$phpvar='"+total+"'; 
+	echo $phpvar;?>";
+	document.getElementByName("nombrejs").innerHTML="<?php 
+	$phpvar='"+nombre+"'; 
+	echo $phpvar;?>";
+	document.getElementsByName("totaljs").innerHTML="<?php 
+	$phpvar='"+total+"'; 
+	echo $phpvar;?>";
 
 
 }

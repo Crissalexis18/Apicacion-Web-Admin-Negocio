@@ -10,7 +10,185 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Estilos/CSS.css">
-        <script src="../JavaScript/JS.js"></script>
+        <!---<script src="../JavaScript/JS.js"></script>--->
+		<script>
+		var num1 = "";
+var num = 1;
+var total = 0;
+var cliente = 0;
+var  precio = 0;
+
+function limpiaElementos(){
+    document.getElementById("nombreCliente").value = "";
+    location.reload();
+}
+
+function Agregar_Articulo() {
+    document.getElementById("numArticulo").innerHTML = (num = (num +1));
+}
+function Quitar_Articulo() {
+    if (num > 1){
+        document.getElementById("numArticulo").innerHTML = (num = (num -1));
+    }
+    else{
+        document.getElementById("numArticulo").innerHTML = 1;
+    }
+}
+
+
+
+function bot1() {
+    num1= document.getElementById("botonA1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonA1").value;
+
+}
+function bot2() {
+    num1= document.getElementById("botonA2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonA2").value;
+}
+function bot3() {
+    num1= document.getElementById("botonA3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonA3").value;
+}
+function bot4() {
+    num1= document.getElementById("botonB1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonb1").value;
+}
+function bot5() {
+    num1= document.getElementById("botonB2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonB2").value;
+}
+function bot6() {
+    num1= document.getElementById("botonB3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonB3").value;
+}
+function bot7() {
+    num1= document.getElementById("botonC1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonC1").value;
+}
+function bot8() {
+    num1= document.getElementById("botonC2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonC2").value;
+}
+function bot9() {
+    num1= document.getElementById("botonC3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonC3").value;
+}
+function bot10() {
+    num1= document.getElementById("botonD1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonD1").value;
+}
+function bot11() {
+    num1= document.getElementById("botonD2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonD2").value;
+}
+function bot12() {
+    num1= document.getElementById("botonD3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonD3").value;
+}
+function bot13() {
+    num1= document.getElementById("botonE1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonE1").value;
+}
+function bot14() {
+    num1= document.getElementById("botonE2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonE2").value;
+}
+function bot15() {
+    num1= document.getElementById("botonE3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonE3").value;
+}
+
+
+
+function calcularPrecio() {
+
+    //var precio1= precio * num;
+
+    cliente=cliente+1
+    total = precio * num;
+
+    agregaRenglon(cliente, num, precio, num1, total);
+	jstophp();
+	
+	
+
+}
+
+function agregaRenglon(cliente, num, precio1, num1, total) {
+
+    var nombre= document.getElementById("nombreCliente").value;
+	
+    // Obtiene una referencia a la tabla
+    var tableRef = document.getElementById("tablaClientes");
+    // Inserta una fila en la tabla, en el índice 0
+    var newRow   = tableRef.insertRow(-1);
+    //creacion de celdas
+    for (var i = 1; i <= 6; i++) {
+        switch(i){
+            case 1:
+                var contenido = cliente;
+                break;
+            case 2:
+                var contenido = nombre;
+                break;
+            case 3:
+                var contenido = num1;
+                break;
+            case 4:
+                var contenido = num;
+                break;
+            case 5:
+                var contenido = precio1;
+                break;
+            case 6:
+                var contenido = total;
+                break;
+        }
+        // Inserta una celda en la fila, en el índice 0
+        var newCell  = newRow.insertCell(-1);
+        // Añade un nodo de texto a la celda
+        if(i>=7){
+            newCell.innerHTML =  contenido;
+        }else{
+            var newText  = document.createTextNode(contenido);
+            newCell.appendChild(newText);
+        }
+    }
+	
+
+}
+
+
+			
+function enviarForm() {
+    limpiaElementos()
+
+}	
+			
+function jstophp(){
+	document.formulario.clientejs.value=cliente;
+	document.forms["formulario"].submit();
+			}
+var element = document.getElementById("clientejs");
+element.value = cliente;
+element.formulario.submit();
+		</script>
 
 
     </head>
@@ -111,7 +289,7 @@
                         <a class='nav-link active' href='PaginaCobro.php'>Cobro</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='PaginaRegArticulos.html'>Registro Artículos</a>
+                        <a class='nav-link' href='PaginaRegArticulos.php'>Registro Artículos</a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link' href='ListaVentas.php'>Lista Ventas</a>
@@ -174,10 +352,19 @@
                 </tr>
             </table>
         </div>
+		
         <div class='form1' >
-            <button id='enviarPago' name='enviarPago' class='btn-hover color-8' onclick='enviarForm()'>Finalizar</button>
+			<form id="formulario" name="formulario" method="get" action="envio.php" >
+				<input type="hidden" id="clientejs"  name="clientejs" value="" />
+				<input type="hidden" id="nombrejs"  name="nombrejs" value="" />
+				<input type="hidden" id="tacojs"  name="tacojs" value="" />
+				<input type="hidden" id="cantidadjs"  name="cantidadjs" value="" />
+				<input type="hidden" id="preciojs"  name="preciojs" value="" />
+				<input type="hidden" id="totaljs"  name="totaljs" value="" />
+            	<button href="#"  class='btn-hover color-8' onClick="jstophp()" >Finalizar</button>
+			</form>
         </div>
-
+		
 
     </body>
 
