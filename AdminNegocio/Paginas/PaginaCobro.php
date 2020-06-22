@@ -120,17 +120,16 @@ function calcularPrecio() {
 
     //var precio1= precio * num;
 
-    cliente=cliente+1
     total = precio * num;
 
-    agregaRenglon(cliente, num, precio, num1, total);
+    agregaRenglon(num, precio, num1, total);
 	jstophp();
 	
 	
 
 }
 
-function agregaRenglon(cliente, num, precio1, num1, total) {
+function agregaRenglon(num, precio1, num1, total) {
 
     var nombre= document.getElementById("nombreCliente").value;
 	
@@ -139,24 +138,21 @@ function agregaRenglon(cliente, num, precio1, num1, total) {
     // Inserta una fila en la tabla, en el índice 0
     var newRow   = tableRef.insertRow(-1);
     //creacion de celdas
-    for (var i = 1; i <= 6; i++) {
+    for (var i = 1; i <= 5; i++) {
         switch(i){
             case 1:
-                var contenido = cliente;
-                break;
-            case 2:
                 var contenido = nombre;
                 break;
-            case 3:
+            case 2:
                 var contenido = num1;
                 break;
-            case 4:
+            case 3:
                 var contenido = num;
                 break;
-            case 5:
+            case 4:
                 var contenido = precio1;
                 break;
-            case 6:
+            case 5:
                 var contenido = total;
                 break;
         }
@@ -343,7 +339,6 @@ element.formulario.submit();
         <div class='container'>
             <table id='tablaClientes' class='table table-hover text-white'>
                 <tr>
-                    <th>Cliente</th>
                     <th>Nombre</th>
                     <th>Taco</th>
                     <th>Cantidad</th>
