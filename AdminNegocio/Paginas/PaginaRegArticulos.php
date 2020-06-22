@@ -14,6 +14,7 @@
 
     </head>
 
+<body class='Fondo'>
     <div class='container-fluid FondoHeader'>
         <div class='p-5 my-0'>
             <h1>Tacos Vacil&oacute;n</h1>
@@ -63,7 +64,7 @@
         </select>
         <input  class='btn-hover color-8' type="submit" value="Enviar"/>
     </form>
-
+</body>
 
 
 </html>
