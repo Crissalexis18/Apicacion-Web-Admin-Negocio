@@ -118,26 +118,26 @@ function bot15() {
 
 function calcularPrecio() {
 
-    //var precio1= precio * num;
+    var precio1= precio * num;
 
     total = precio * num;
+     var nombre= document.getElementById("nombreCliente").value;
+    agregaRenglon( num, precio, num1, total);
+	jstophp(nombre);
 
-    agregaRenglon(num, precio, num1, total);
-	jstophp();
-	
-	
+
 
 }
 
-function agregaRenglon(num, precio1, num1, total) {
+function agregaRenglon( num, precio1, num1, total) {
 
     var nombre= document.getElementById("nombreCliente").value;
-	
-    // Obtiene una referencia a la tabla
+
+
     var tableRef = document.getElementById("tablaClientes");
-    // Inserta una fila en la tabla, en el índice 0
+
     var newRow   = tableRef.insertRow(-1);
-    //creacion de celdas
+
     for (var i = 1; i <= 5; i++) {
         switch(i){
             case 1:
@@ -156,9 +156,7 @@ function agregaRenglon(num, precio1, num1, total) {
                 var contenido = total;
                 break;
         }
-        // Inserta una celda en la fila, en el índice 0
         var newCell  = newRow.insertCell(-1);
-        // Añade un nodo de texto a la celda
         if(i>=7){
             newCell.innerHTML =  contenido;
         }else{
@@ -166,25 +164,29 @@ function agregaRenglon(num, precio1, num1, total) {
             newCell.appendChild(newText);
         }
     }
-	
-
 }
 
 
-			
+
 function enviarForm() {
     limpiaElementos()
 
-}	
-			
-function jstophp(){
-	document.formulario.clientejs.value=cliente;
+}
+
+function jstophp(nombre){
+    //agregar para la id unica
+	document.formulario.nombrejs.value=nombre;
+	document.formulario.cantidadjs.value=num;
+	document.formulario.totaljs.value=total;
+	document.formulario.preciojs.value=precio;
 	document.forms["formulario"].submit();
-			}
+
+}
+
 var element = document.getElementById("clientejs");
-element.value = cliente;
+element.value = $PrecioA1;
 element.formulario.submit();
-		</script>
+</script>
 
 
     </head>
@@ -297,7 +299,6 @@ element.formulario.submit();
 
         <!--Contenido-->
 
-
         <div name="registroClientes" class='text-white form1'>
 
             <legend>Página de Cóbro</legend>
@@ -326,12 +327,10 @@ element.formulario.submit();
 
             <label>Numero de tacos:</label>
             <div class='buttons'>
-
                 <p id="numArticulo" >1</p>
                 <button id='agregarArt' name='agregarArt' class='btn-hover color-1' onclick='Quitar_Articulo()'>Quitar</button>
                 <button id='quitarArt' name='quitarArt' class='btn-hover color-2' onclick='Agregar_Articulo()'>Agregar</button>
             </div>
-
             <button id='enviarCliente' name='enviarCliente' class='btn-hover color-8' onclick='calcularPrecio()'>Añadir</button>
 
         </div>
@@ -357,6 +356,7 @@ element.formulario.submit();
 				<input type="hidden" id="preciojs"  name="preciojs" value="" />
 				<input type="hidden" id="totaljs"  name="totaljs" value="" />
             	<button href="#"  class='btn-hover color-8' onClick="jstophp()" >Finalizar</button>
+
 			</form>
         </div>
 		

@@ -14,6 +14,7 @@
 
     </head>
 
+
 <body class='Fondo'>
     <div class='container-fluid FondoHeader'>
         <div class='p-5 my-0'>
@@ -27,7 +28,7 @@
                     <a class='nav-link' href='PaginaCobro.php'>Cobro</a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-link active' href='PaginaRegArticulos.html'>Registro Artículos</a>
+                    <a class='nav-link active' href='PaginaRegArticulos.php'>Registro Artículos</a>
                 </li>
                 <li class='nav-item'>
                     <a class='nav-link' href='ListaVentas.php'>Lista Ventas</a>
