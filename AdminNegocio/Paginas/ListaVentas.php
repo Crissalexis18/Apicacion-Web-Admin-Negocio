@@ -37,7 +37,7 @@
             else {
             echo '<script language="javascript">alert("Selecciona fecha");</script>';
         }
-        } 
+        }
 
         ?>
 
@@ -53,7 +53,7 @@
                         <a class='nav-link' href='PaginaCobro.php'>Cobro</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='PaginaRegArticulos.html'>Registro Artículos</a>
+                        <a class='nav-link' href='PaginaRegArticulos.php'>Registro Artículos</a>
                     </li>
                     <li class='nav-item'>
                         <a class='nav-link active' href='ListaVentas.php'>Lista Ventas</a>
