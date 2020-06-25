@@ -1,5 +1,4 @@
 <?php 
-	$cliente=$_GET['clientejs'];//id
 	$nombre=$_GET['nombrejs'];//nombre
 	$cantidad=$_GET['cantidadjs'];//cantidad
 	$precio=$_GET['preciojs'];//precio
@@ -16,7 +15,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }else{echo "Connected successfully<br><br>";}
   $nombre;
-$sql = "INSERT INTO ORDENES (ID, NOMBRE,CANTIDAD,PRECIO_UNIDAD,PRECIO_TOTAL,FECHA) VALUES ('$cliente', '$nombre', '$cantidad','$precio','$total',CURRENT_TIMESTAMP())";
+$sql = "INSERT INTO ORDENES (NOMBRE,CANTIDAD,PRECIO_UNIDAD,PRECIO_TOTAL,FECHA) VALUES ('$nombre', '$cantidad','$precio','$total',CURRENT_TIMESTAMP())";
 	 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 
