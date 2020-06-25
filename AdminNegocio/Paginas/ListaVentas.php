@@ -16,7 +16,7 @@
         <?php
         $fechaHoy = getdate();
         if (isset($_POST['fechaventas'])) {
-			
+
             $fechaIngresada = explode('-', $_POST['fechaventas']);
             //print_r($fechaHoy );
             //print_r($fechaIngresada);
@@ -74,35 +74,36 @@
 			
         </form>
 		
-		<table align="center">
+		<table align="center" class='container table table-hover text-white'>
 			<thead>
 				<th>ID</th><th>Nombre</th><th>Pago Total</th><th>Fecha</th>
 			</thead>
 			<tbody>
-				<?php 
-				$servername = "idawis-uaz.ddns.net:33060";
-				$username = "cesarv2001";
-				$password = "Qkmqd43";
-				$dbname = "cesarv2001";
-				// Create connection
-				$conn = mysqli_connect($servername, $username, $password,$dbname);
-				$fechaven=$_POST['fechaventas'];
-       $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA 
-            from ORDENES where FECHA='$fechaven'";
+				<?php
+			    	$servername = "idawis-uaz.ddns.net:33060";
+			    	$username = "cesarv2001";
+			    	$password = "Qkmqd43";
+			    	$dbname = "cesarv2001";
+			    	// Create connection
+				    $conn = mysqli_connect($servername, $username, $password,$dbname);
 
-       if($result = mysqli_query($conn, $query)){
-          if(mysqli_num_rows($result) > 0){
-            while ($row = mysqli_fetch_array($result)){
-   ?>
-				
-    <tr>
-        <td><?php echo htmlentities($row['ID']); ?></td>
-        <td><?php echo htmlentities($row['NOMBRE']); ?></td>
-        <td><?php echo htmlentities($row['PRECIO_TOTAL']); ?></td>
-        <td><?php echo htmlentities($row['FECHA']); ?></td>
-        
+			        $fechaven=$_POST['fechaventas'];
+
+                    $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA from ORDENES where  FECHA='$fechaven'";
+
+                    if($result = mysqli_query($conn, $query)){
+                         if(mysqli_num_rows($result) > 0){
+                              while ($row = mysqli_fetch_array($result)){
+                ?>
+    <div  class='container'>
+    <tr  class='table table-hover text-white'>
+        <th><?php echo htmlentities($row['ID']); ?></td>
+        <th><?php echo htmlentities($row['NOMBRE']); ?></td>
+        <th><?php echo htmlentities($row['PRECIO_TOTAL']); ?></td>
+        <th><?php echo htmlentities($row['FECHA']); ?></td>
+
     </tr>
-
+    </div>
 
             
             <?php } ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$nombre=$_GET['nombrejs'];//nombre
 	$cantidad=$_GET['cantidadjs'];//cantidad
 	$precio=$_GET['preciojs'];//precio

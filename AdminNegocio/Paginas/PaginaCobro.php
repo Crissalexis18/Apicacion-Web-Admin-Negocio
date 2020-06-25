@@ -123,11 +123,19 @@ function calcularPrecio() {
     total = precio * num;
      var nombre= document.getElementById("nombreCliente").value;
     agregaRenglon( num, precio, num1, total);
-	jstophp(nombre);
-
 
 
 }
+
+
+function enviarf() {
+    var precio1= precio * num;
+
+    total = precio * num;
+     var nombre= document.getElementById("nombreCliente").value;
+	jstophp(nombre);
+}
+
 
 function agregaRenglon( num, precio1, num1, total) {
 
@@ -167,14 +175,7 @@ function agregaRenglon( num, precio1, num1, total) {
 }
 
 
-
-function enviarForm() {
-    limpiaElementos()
-
-}
-
 function jstophp(nombre){
-    //agregar para la id unica
 	document.formulario.nombrejs.value=nombre;
 	document.formulario.cantidadjs.value=num;
 	document.formulario.totaljs.value=total;
@@ -355,7 +356,7 @@ element.formulario.submit();
 				<input type="hidden" id="cantidadjs"  name="cantidadjs" value="" />
 				<input type="hidden" id="preciojs"  name="preciojs" value="" />
 				<input type="hidden" id="totaljs"  name="totaljs" value="" />
-            	<button href="#"  class='btn-hover color-8' onClick="jstophp()" >Finalizar</button>
+            	<button href="#"  class='btn-hover color-8' onClick="enviarf()" >Finalizar</button>
 
 			</form>
         </div>
