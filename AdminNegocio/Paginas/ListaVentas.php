@@ -16,6 +16,7 @@
         <?php
         $fechaHoy = getdate();
         if (isset($_POST['fechaventas'])) {
+			
             $fechaIngresada = explode('-', $_POST['fechaventas']);
             //print_r($fechaHoy );
             //print_r($fechaIngresada);
@@ -31,14 +32,15 @@
                         ($mesIngresado > $mesHoy) || ($diaIngresado > $diaHoy && $mesIngresado == $mesHoy)) {
                     echo '<script language="javascript">alert("NO EXISTE LA FECHA");</script>';
                 } else {
-                    echo '<script language="javascript">alert("Fecha correcta");</script>';
+                     $fechaven=$_POST['fechaventas'];
+					
                 }
             }
             else {
-            echo '<script language="javascript">alert("Selecciona fecha");</script>';
+            echo '<script language="javascript">alert("Seleccione una fecha");</script>';
         }
         }
-
+	
         ?>
 
         <div class='container-fluid FondoHeader'>
@@ -67,9 +69,50 @@
             <legend>Lista de Ventas</legend>
             <label>Selecciona la fecha para mostrar</label>
             <input type='date' id='fechaventas' name='fechaventas'>
+			
             <input type="submit" id="enviarVentas" name="enviarVentas" class='btn-hover color-8' >
+			
         </form>
+		
+		<table align="center">
+			<thead>
+				<th>ID</th><th>Nombre</th><th>Pago Total</th><th>Fecha</th>
+			</thead>
+			<tbody>
+				<?php 
+				$servername = "idawis-uaz.ddns.net:33060";
+				$username = "cesarv2001";
+				$password = "Qkmqd43";
+				$dbname = "cesarv2001";
+				// Create connection
+				$conn = mysqli_connect($servername, $username, $password,$dbname);
+				$fechaven=$_POST['fechaventas'];
+       $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA 
+            from ORDENES where FECHA='$fechaven'";
 
+       if($result = mysqli_query($conn, $query)){
+          if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_array($result)){
+   ?>
+				
+    <tr>
+        <td><?php echo htmlentities($row['ID']); ?></td>
+        <td><?php echo htmlentities($row['NOMBRE']); ?></td>
+        <td><?php echo htmlentities($row['PRECIO_TOTAL']); ?></td>
+        <td><?php echo htmlentities($row['FECHA']); ?></td>
+        
+    </tr>
+
+
+            
+            <?php } ?>
+				<?php } else { echo "<p align='center'></p>"; }?>
+				<?php } else {
+        die("Database query failed. ". mysqli_error($conn));
+    } ?>
+			</tbody>
+		</table>
+		
     </body>
 
 </html>
