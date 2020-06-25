@@ -86,10 +86,13 @@
 			    	$dbname = "cesarv2001";
 			    	// Create connection
 				    $conn = mysqli_connect($servername, $username, $password,$dbname);
-
+                    if(isset($_POST['fechaventas'])){
 			        $fechaven=$_POST['fechaventas'];
+			        $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA from ORDENES where  FECHA='$fechaven'";
+                    }
+                    else{
+                    $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA from ORDENES where  FECHA=''";}
 
-                    $query = "SELECT ID, NOMBRE, PRECIO_TOTAL, FECHA from ORDENES where  FECHA='$fechaven'";
 
                     if($result = mysqli_query($conn, $query)){
                          if(mysqli_num_rows($result) > 0){
