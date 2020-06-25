@@ -22,5 +22,5 @@ $sql = "INSERT INTO ORDENES (NOMBRE,CANTIDAD,PRECIO_UNIDAD,PRECIO_TOTAL,FECHA) V
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-echo ('"<meta charset="utf-8" http-equiv="refresh" content="0; url=paginaCobro.php">"');
+echo ('"<meta charset="utf-8" http-equiv="refresh" content="0; url=PaginaCobro.php">"');
 ?>
