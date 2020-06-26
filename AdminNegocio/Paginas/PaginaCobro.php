@@ -10,13 +10,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Estilos/CSS.css">
-        <!---<script src="../JavaScript/JS.js"></script>--->
+       
 		<script>
-		var num1 = "";
-var num = 1;
-var total = 0;
-var cliente = 0;
-var  precio = 0;
+			var num1 = "";
+			var num = 1;
+			var total = 0;
+			var cliente = 0;
+			var precio = 0;
+			var num2=0;
 
 function limpiaElementos(){
     document.getElementById("nombreCliente").value = "";
@@ -56,7 +57,7 @@ function bot3() {
 function bot4() {
     num1= document.getElementById("botonB1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonb1").value;
+    precio= document.getElementById("botonB1").value;
 }
 function bot5() {
     num1= document.getElementById("botonB2").textContent;
@@ -119,10 +120,11 @@ function bot15() {
 function calcularPrecio() {
 
     var precio1= precio * num;
-
-    total = precio * num;
+	
+	num2=num2+num;
+    total = total + precio1;
      var nombre= document.getElementById("nombreCliente").value;
-    agregaRenglon( num, precio, num1, total);
+    agregaRenglon( num, precio1, num1, total,num2);
 
 
 }
@@ -131,13 +133,13 @@ function calcularPrecio() {
 function enviarf() {
     var precio1= precio * num;
 
-    total = precio * num;
+    
      var nombre= document.getElementById("nombreCliente").value;
 	jstophp(nombre);
 }
 
 
-function agregaRenglon( num, precio1, num1, total) {
+function agregaRenglon( num, precio1, num1, total, num2) {
 
     var nombre= document.getElementById("nombreCliente").value;
 
@@ -146,7 +148,7 @@ function agregaRenglon( num, precio1, num1, total) {
 
     var newRow   = tableRef.insertRow(-1);
 
-    for (var i = 1; i <= 5; i++) {
+    for (var i = 1; i <= 6; i++) {
         switch(i){
             case 1:
                 var contenido = nombre;
@@ -157,12 +159,17 @@ function agregaRenglon( num, precio1, num1, total) {
             case 3:
                 var contenido = num;
                 break;
-            case 4:
-                var contenido = precio1;
+			case 4:
+                var contenido = num2;
                 break;
             case 5:
+                var contenido = precio1;
+                break;
+            case 6:
                 var contenido = total;
                 break;
+		
+				
         }
         var newCell  = newRow.insertCell(-1);
         if(i>=7){
@@ -177,9 +184,8 @@ function agregaRenglon( num, precio1, num1, total) {
 
 function jstophp(nombre){
 	document.formulario.nombrejs.value=nombre;
-	document.formulario.cantidadjs.value=num;
+	document.formulario.cantidadjs.value=num2;
 	document.formulario.totaljs.value=total;
-	document.formulario.preciojs.value=precio;
 	document.forms["formulario"].submit();
 
 }
@@ -341,7 +347,8 @@ element.formulario.submit();
                 <tr>
                     <th>Nombre</th>
                     <th>Taco</th>
-                    <th>Cantidad</th>
+                    <th>Cantidad Por Orden</th>
+					<th>Cantidad Total</th>
                     <th>Precio</th>
                     <th>Total</th>
                 </tr>
