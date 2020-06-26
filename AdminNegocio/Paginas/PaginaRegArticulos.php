@@ -17,9 +17,19 @@
 
 <body class='Fondo'>
     <div class='container-fluid FondoHeader'>
-        <div class='p-5 my-0'>
-            <h1>Tacos Vacil&oacute;n</h1>
-            <h5>"No están buenos, pero quitan el hambre"</h5>
+        <div class="container">
+            <p>
+                <span>T</span>
+                <span>V</span>
+            </p>
+            <p>
+                <span>V</span>
+                <span>T</span>
+            </p>
+            <p>
+                <span>T</span>
+                <span>V</span>
+            </p>
         </div>
 
         <div>
