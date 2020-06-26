@@ -45,34 +45,40 @@ function bot1() {
 
 }
 function bot2() {
-    num1= document.getElementById("botonA2").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonA2").value;
-}
-function bot3() {
-    num1= document.getElementById("botonA3").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonA3").value;
-}
-function bot4() {
     num1= document.getElementById("botonB1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
     precio= document.getElementById("botonB1").value;
 }
-function bot5() {
-    num1= document.getElementById("botonB2").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonB2").value;
-}
-function bot6() {
-    num1= document.getElementById("botonB3").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonB3").value;
-}
-function bot7() {
+function bot3() {
+
     num1= document.getElementById("botonC1").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
     precio= document.getElementById("botonC1").value;
+}
+function bot4() {
+
+    num1= document.getElementById("botonD1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonD1").value;
+}
+function bot5() {
+
+
+    num1= document.getElementById("botonE1").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonE1").value;
+}
+function bot6() {
+
+	    num1= document.getElementById("botonA2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonA2").value;
+}
+function bot7() {
+
+	num1= document.getElementById("botonB2").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonB2").value;
 }
 function bot8() {
     num1= document.getElementById("botonC2").textContent;
@@ -80,34 +86,40 @@ function bot8() {
     precio= document.getElementById("botonC2").value;
 }
 function bot9() {
-    num1= document.getElementById("botonC3").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonC3").value;
-}
-function bot10() {
-    num1= document.getElementById("botonD1").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonD1").value;
-}
-function bot11() {
+
     num1= document.getElementById("botonD2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
     precio= document.getElementById("botonD2").value;
 }
-function bot12() {
-    num1= document.getElementById("botonD3").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonD3").value;
-}
-function bot13() {
-    num1= document.getElementById("botonE1").textContent;
-    document.getElementById("tipoArticulo").innerHTML = num1;
-    precio= document.getElementById("botonE1").value;
-}
-function bot14() {
-    num1= document.getElementById("botonE2").textContent;
+function bot10() {
+
+	num1= document.getElementById("botonE2").textContent;
     document.getElementById("tipoArticulo").innerHTML = num1;
     precio= document.getElementById("botonE2").value;
+}
+function bot11() {
+
+    num1= document.getElementById("botonA3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonA3").value;
+}
+function bot12() {
+
+	    num1= document.getElementById("botonB3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonB3").value;
+}
+function bot13() {
+
+    num1= document.getElementById("botonC3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonC3").value;
+}
+function bot14() {
+
+	    num1= document.getElementById("botonD3").textContent;
+    document.getElementById("tipoArticulo").innerHTML = num1;
+    precio= document.getElementById("botonD3").value;
 }
 function bot15() {
     num1= document.getElementById("botonE3").textContent;
@@ -315,20 +327,20 @@ element.formulario.submit();
             <label>Tipo de taco:</label>
             <div class='buttons' id='buttons'>
                 <p id="tipoArticulo" >Artículo</p>
-                <button id='botonA1' name = 'botonA1' class='btn-hover color-1'   onclick='bot1()' value=<?php echo $PrecioA1 ?> > <?php echo 'A1-' . $DescripcionA1 . ' $' . $PrecioA1 . '.00' ?></button>
-                <button id='botonA2' name = 'botonA2' class='btn-hover color-2'onclick='bot2()' value=<?php echo $PrecioA2 ?> ><?php echo 'A2-' . $DescripcionA2 . ' $' . $PrecioA2 . '.00' ?></button>
-                <button id='botonA3' name ='botonA3' class='btn-hover color-3' onclick='bot3()' value=<?php echo $PrecioA3 ?> ><?php echo 'A3-' . $DescripcionA3 . ' $' . $PrecioA3 . '.00' ?></button>
-                <button id='botonB1' name = 'botonB1' class='btn-hover color-5' onclick='bot4()' value=<?php echo $PrecioB1 ?> ><?php echo 'B1-' . $DescripcionB1 . ' $' . $PrecioB1 . '.00' ?></button>
-                <button id='botonB2' name = 'botonB2' class='btn-hover color-6' onclick='bot5()' value=<?php echo $PrecioB2 ?> ><?php echo 'B2-' . $DescripcionB2 . ' $' . $PrecioB2 . '.00' ?></button>
-                <button id='botonB3' name = 'botonB3' class='btn-hover color-4' onclick='bot6()' value=<?php echo $PrecioB3 ?> ><?php echo 'B3-' . $DescripcionB3 . ' $' . $PrecioB3 . '.00' ?></button>
-                <button id='botonC1' name = 'botonC1' class='btn-hover color-7' onclick='bot7()' value=<?php echo $PrecioC1 ?> ><?php echo 'C1-' . $DescripcionC1 . ' $' . $PrecioC1 . '.00' ?></button>
+                <button id='botonA1' name = 'botonA1' class='btn-hover color-1' onclick='bot1()' value=<?php echo $PrecioA1 ?> > <?php echo 'A1-' . $DescripcionA1 . ' $' . $PrecioA1 . '.00' ?></button>
+                <button id='botonB1' name = 'botonB1' class='btn-hover color-2' onclick='bot2()' value=<?php echo $PrecioA2 ?> ><?php echo 'B1-' . $DescripcionA2 . ' $' . $PrecioA2 . '.00' ?></button>
+                <button id='botonC1' name = 'botonC1' class='btn-hover color-3' onclick='bot3()' value=<?php echo $PrecioA3 ?> ><?php echo 'C1-' . $DescripcionA3 . ' $' . $PrecioA3 . '.00' ?></button>
+                <button id='botonD1' name = 'botonD1' class='btn-hover color-5' onclick='bot4()' value=<?php echo $PrecioB1 ?> ><?php echo 'D1-' . $DescripcionB1 . ' $' . $PrecioB1 . '.00' ?></button>
+                <button id='botonE1' name = 'botonE1' class='btn-hover color-6' onclick='bot5()' value=<?php echo $PrecioB2 ?> ><?php echo 'E1-' . $DescripcionB2 . ' $' . $PrecioB2 . '.00' ?></button>
+                <button id='botonA2' name = 'botonA2' class='btn-hover color-4' onclick='bot6()' value=<?php echo $PrecioB3 ?> ><?php echo 'A2-' . $DescripcionB3 . ' $' . $PrecioB3 . '.00' ?></button>
+                <button id='botonB2' name = 'botonB2' class='btn-hover color-7' onclick='bot7()' value=<?php echo $PrecioC1 ?> ><?php echo 'B2-' . $DescripcionC1 . ' $' . $PrecioC1 . '.00' ?></button>
                 <button id='botonC2' name = 'botonC2' class='btn-hover color-9' onclick='bot8()' value=<?php echo $PrecioC2 ?> ><?php echo 'C2-' . $DescripcionC2 . ' $' . $PrecioC2 . '.00' ?></button>
-                <button id='botonC3' name = 'botonC3' class='btn-hover color-10' onclick='bot9()' value=<?php echo $PrecioC3 ?> ><?php echo 'C3-' . $DescripcionC3 . ' $' . $PrecioC3 . '.00' ?></button>
-                <button id='botonD1' name = 'botonD1' class='btn-hover color-11'onclick='bot10()' value=<?php echo $PrecioD1 ?> ><?php echo 'D1-' . $DescripcionD1 . ' $' . $PrecioD1 . '.00' ?></button>
-                <button id='botonD2' name = 'botonD2' class='btn-hover color-1' onclick='bot11()' value=<?php echo $PrecioD2 ?> ><?php echo 'D2-' . $DescripcionD2 . ' $' . $PrecioD2 . '.00' ?></button>
-                <button id='botonD3' name = 'botonD3' class='btn-hover color-2' onclick='bot12()'value=<?php echo $PrecioD3 ?> ><?php echo 'D3-' . $DescripcionD3 . ' $' . $PrecioD3 . '.00' ?></button>
-                <button id='botonE1' name = 'botonE1' class='btn-hover color-3'onclick='bot13()' value=<?php echo $PrecioE1 ?> ><?php echo 'E1-' . $DescripcionE1 . ' $' . $PrecioE1 . '.00' ?></button>
-                <button id='botonE2' name = 'botonE2' class='btn-hover color-6' onclick='bot14()' value=<?php echo $PrecioE2 ?> ><?php echo 'E2-' . $DescripcionE2 . ' $' . $PrecioE2 . '.00' ?></button>
+                <button id='botonD2' name = 'botonD2' class='btn-hover color-10'onclick='bot9()' value=<?php echo $PrecioC3 ?> ><?php echo 'D2-' . $DescripcionC3 . ' $' . $PrecioC3 . '.00' ?></button>
+                <button id='botonE2' name = 'botonE2' class='btn-hover color-11'onclick='bot10()' value=<?php echo $PrecioD1 ?> ><?php echo 'E2-' . $DescripcionD1 . ' $' . $PrecioD1 . '.00' ?></button>
+                <button id='botonA3' name = 'botonA3' class='btn-hover color-1' onclick='bot11()' value=<?php echo $PrecioD2 ?> ><?php echo 'A3-' . $DescripcionD2 . ' $' . $PrecioD2 . '.00' ?></button>
+                <button id='botonB3' name = 'botonB3' class='btn-hover color-2' onclick='bot12()'value=<?php echo $PrecioD3 ?> ><?php echo 'B3-' . $DescripcionD3 . ' $' . $PrecioD3 . '.00' ?></button>
+                <button id='botonC3' name = 'botonC3' class='btn-hover color-3' onclick='bot13()' value=<?php echo $PrecioE1 ?> ><?php echo 'C3-' . $DescripcionE1 . ' $' . $PrecioE1 . '.00' ?></button>
+                <button id='botonD3' name = 'botonD3' class='btn-hover color-6' onclick='bot14()' value=<?php echo $PrecioE2 ?> ><?php echo 'D3-' . $DescripcionE2 . ' $' . $PrecioE2 . '.00' ?></button>
                 <button id='botonE3' name = 'botonE3' class='btn-hover color-7' onclick='bot15()' value=<?php echo $PrecioE3 ?> ><?php echo 'E3-' . $DescripcionE3 . ' $' . $PrecioE3 . '.00' ?></button>
             </div>
 
